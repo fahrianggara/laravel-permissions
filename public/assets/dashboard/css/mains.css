@@ -1,0 +1,120 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
+* {
+    font-family: "Inter", sans-serif;
+}
+
+.content-header h1,
+li.nav-header {
+    font-weight: 700;
+}
+
+.brand-link {
+    font-weight: 600;
+    text-align: center;
+}
+
+.modal-backdrop {
+    z-index: 1037 !important;
+}
+
+.dropdown-toggle::after,
+.dropleft .dropdown-toggle::before,
+.dropright .dropdown-toggle::after {
+    display: none;
+}
+
+.table {
+    --bs-table-bg: transparent;
+    --bs-table-accent-bg: transparent;
+    --bs-table-striped-color: #374151;
+    --bs-table-striped-bg: rgba(17, 24, 39, 0.05);
+    --bs-table-active-color: #374151;
+    --bs-table-active-bg: rgba(17, 24, 39, 0.1);
+    --bs-table-hover-color: #374151;
+    --bs-table-hover-bg: rgba(17, 24, 39, 0.075);
+    width: 100%;
+    margin-bottom: 1rem;
+    color: var(--text-color);
+    vertical-align: top;
+    border-color: #E5E7EB;
+}
+
+.table> :not(caption)>*>* {
+    padding: 0.75rem 0.5rem;
+    background-color: var(--bs-table-bg);
+    /* border-bottom-width: 0.0625rem; */
+    box-shadow: inset 0 0 0 9999px var(--bs-table-accent-bg);
+}
+
+.table>tbody {
+    vertical-align: inherit;
+}
+
+.table>thead {
+    vertical-align: bottom;
+}
+
+.table> :not(:last-child)> :last-child>* {
+    border-bottom-color: currentColor;
+}
+
+.table-hover>tbody>tr:hover {
+    background-color: rgba(0, 0, 0, .08);
+    color: #000;
+    border-radius: 5px;
+}
+
+.table .name-user {
+    color: #000;
+}
+
+.table thead th {
+    padding-top: 0.75rem;
+    padding-bottom: 0.75rem;
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    font-weight: 600;
+    border-top: 0;
+}
+
+.table td,
+.table th {
+    border-top: .1px solid rgb(135, 135, 135);
+}
+
+.table th {
+    font-weight: 500;
+    padding: 1rem;
+}
+
+.table td,
+.table th {
+    font-size: 0.875rem;
+    white-space: nowrap;
+}
+
+.table.user-table thead th {
+    border-top: 0;
+}
+
+.table.align-items-center td,
+.table.align-items-center th {
+    vertical-align: middle;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .table-hover tr {
+        transition: none;
+    }
+}
+
+.card .table {
+    margin-bottom: 0;
+}
+
+.card .table td,
+.card .table th {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+}
