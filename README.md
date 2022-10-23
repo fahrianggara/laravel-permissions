@@ -9,7 +9,7 @@
 
 # Laravel Roles Permissions - Spatie version
 This project was created in October, 2022 as Laravel 9.34.0 version
- ---
+---
 This is a Laravel 9 adminpanel starter project with roles-permissions management based on Spatie Laravel-permission package and AdminLTE.
 
 ## Build with
@@ -22,9 +22,7 @@ This is not a package - it's a full Laravel project that you should use as a sta
 1. Clone the repository with `git clone` or download this project
 2. Copy `.env.example` file to `.env` and edit database credentials there
 3. Run `composer install`
-4. Run `php artisan key:generate`
-5. Run `php artisan migrate --seed` (it has some seeded data - see below)
-6. Go to Permission.php at `vendor/spatie/laravel-permission/src/Models` and copy this code after function roles
+4. Go to Permission.php at `vendor/spatie/laravel-permission/src/Models` and copy this code after function roles
 
     ``` php
     public function labelPermissions(): BelongsToMany
@@ -32,6 +30,8 @@ This is not a package - it's a full Laravel project that you should use as a sta
         return $this->belongsToMany(LabelPermission::class, 'group_permissions')->withTimestamps();
     }
     ``` 
+5. Run `php artisan key:generate`
+6. Run `php artisan migrate --seed` (it has some seeded data - see below)
 7. and run your laravel `php artisan serve`
 8. Enjoyed!
 
