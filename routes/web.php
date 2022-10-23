@@ -3,6 +3,10 @@
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Auth;
 
+Route::get('/', function() {
+    return redirect()->route('login');
+});
+
 Auth::routes();
 Route::group(['prefix' => 'dashboard', 'middleware' => ['auth', 'web']], function () {
     Route::get('/', [App\Http\Controllers\Dashboard\IndexController::class, 'dashboard'])->name('dashboard');
