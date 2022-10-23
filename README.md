@@ -14,7 +14,7 @@ This is a Laravel 9 adminpanel starter project with roles-permissions management
 
 ## Installation
 This is not a package - it's a full Laravel project that you should use as a starter boilerplate, and then add your own custom functionality.
-1. Clone the repository with `git clone` or download this project
+1. Clone the repository with `git clone https://github.com/fahrianggara/laravel-permissions.git` or download this project
 2. Copy `.env.example` file to `.env` and edit database credentials there
 3. Run `composer install`
 4. Go to Permission.php at `vendor/spatie/laravel-permission/src/Models/Permission.php` and copy this code after function roles
