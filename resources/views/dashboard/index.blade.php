@@ -89,8 +89,8 @@
                             @endif
 
                             @if (!Session::has('register'))
-                                <p>
-                                    {{ \Illuminate\Foundation\Inspiring::quote() }}
+                                <p id="qoute">
+                                    “Be yourself!” — Fahri Anggara.
                                 </p>
                             @endif
 
@@ -104,3 +104,27 @@
         </div>
     </div>
 @endsection
+
+
+@push('js')
+    <script>
+        displayQuote = () => {
+            let index = Math.floor(Math.random() * data.length);
+            let quote = data[index].text;
+            let author = data[index].author;
+            if (!author) {
+                author = 'Anonymous'
+            }
+
+            $('#qoute').text(`“${quote}” — ${author}.`);
+        }
+
+        fetch("https://type.fit/api/quotes")
+            .then((res) => {
+                return res.json();
+            }).then((data) => {
+                this.data = data;
+                displayQuote();
+            });
+    </script>
+@endpush
