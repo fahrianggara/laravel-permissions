@@ -78,7 +78,7 @@
 
                     <div class="card-body">
                         <div class="callout callout-info">
-                            <h5>Hello, {{ Auth::user()->name }}!</h5>
+                            <b>Hello, {{ Auth::user()->name }}!</b>
 
                             @if (Session::has('login'))
                                 <p>
@@ -87,11 +87,12 @@
                                     {{ Session::get('register') }}
                                 </p>
                             @endif
-
+                            <hr>
                             @if (!Session::has('register'))
-                                <p id="qoute">
-                                    “Be yourself!” — Fahri Anggara.
-                                </p>
+                                <div id="qoute">
+                                    <span class='text-info'><b>Quote:</b></span>
+                                    <span>“Be yourself!” — Fahri Anggara.</span>
+                                </div>
                             @endif
 
                             @if (Session::has('register'))
@@ -116,7 +117,7 @@
                 author = 'Anonymous'
             }
 
-            $('#qoute').text(`“${quote}” — ${author}.`);
+            $('#qoute').html(`<span class='text-info'><b>Quote:</b></span> <span>“${quote}” — ${author}.</span>`);
         }
 
         fetch("https://type.fit/api/quotes")
