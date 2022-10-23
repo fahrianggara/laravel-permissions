@@ -24,7 +24,8 @@ This is not a package - it's a full Laravel project that you should use as a sta
 3. Run `composer install`
 4. Run `php artisan key:generate`
 5. Run `php artisan migrate --seed` (it has some seeded data - see below)
-6. Go to Permission.php at `vendor/spatie/laravel-permission/src/Models` and copy this code after function roles 
+6. Go to Permission.php at `vendor/spatie/laravel-permission/src/Models` and copy this code after function roles
+
     ``` php
     public function labelPermissions(): BelongsToMany
     {
@@ -36,16 +37,19 @@ This is not a package - it's a full Laravel project that you should use as a sta
 
 ## Default Credentials 
 1. Super Admin
+
     ```
     Email: superadmin@mail.com
     Password: password
     ```
 2. Admin
+
     ```
     Email: admin@mail.com
     Password: password
     ```
 3. User
+
     ```
     Email: user@mail.com
     Password: password
