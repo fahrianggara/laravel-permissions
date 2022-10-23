@@ -25,6 +25,9 @@ This is not a package - it's a full Laravel project that you should use as a sta
 4. Go to Permission.php at `vendor/spatie/laravel-permission/src/Models/Permission.php` and copy this code after function roles
 
     ``` php
+    /**
+     * A Relations to table label permissions
+     */
     public function labelPermissions(): BelongsToMany
     {
         return $this->belongsToMany(LabelPermission::class, 'group_permissions')->withTimestamps();
