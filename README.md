@@ -9,14 +9,14 @@
 
 # Laravel Roles Permissions - Spatie version
 
-### This project was created in October, 2022 as Laravel 9.34.0 version
+#### This project was created in October, 2022 as Laravel 9.34.0 version
 -----
 This is a Laravel 9 adminpanel starter project with roles-permissions management based on Spatie Laravel-permission package and AdminLTE.
 
 ## Build with
-* [![Laravel][Laravel.com]][Laravel-url]
-* [![Bootstrap][Bootstrap.com]][Bootstrap-url]
-* [![JQuery][JQuery.com]][JQuery-url]
+* Laravel
+* Bootstrap
+* jQuery
 
 ## Installation
 This is not a package - it's a full Laravel project that you should use as a starter boilerplate, and then add your own custom functionality.
