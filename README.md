@@ -31,6 +31,8 @@ This is not a package - it's a full Laravel project that you should use as a sta
    Don't forget to call the LabelPermission models in the top line
     ``` php
     <?php
+
+    namespace Spatie\Permission\Models;
     
     use App\Models\SuperAdmin\LabelPermission;
     ``` 
