@@ -33,6 +33,12 @@ This is not a package - it's a full Laravel project that you should use as a sta
         return $this->belongsToMany(LabelPermission::class, 'group_permissions')->withTimestamps();
     }
     ``` 
+   Don't forget to call the LabelPermission models in the top line
+    ``` php
+    <?php
+    
+    use App\Models\SuperAdmin\LabelPermission;
+    ``` 
 5. Run `php artisan key:generate`
 6. Run `php artisan migrate --seed` (it has some seeded data - see below)
 7. and run your laravel `php artisan serve`
