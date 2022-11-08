@@ -62,6 +62,10 @@
     @stack('js')
 
     <script>
+        // history.replaceState('', document.title, window.location.origin + window
+        //     .location.pathname + window
+        //     .location.search);
+
         $('[data-dismiss="modal"]').on('click', function() {
             $(document).find('span.error-text').text('');
             $(document).find('.form-control').removeClass(
@@ -69,6 +73,12 @@
             $(document).find('textarea').removeClass(
                 'is-invalid');
             $('form')[0].reset();
+
+            // if modal edit close, uncheck all if checked
+            let checkArr = document.querySelectorAll('.form-check-input')
+            for (let i = 0; i < checkArr.length; i++) {
+                checkArr[i].checked = false;
+            }
         });
     </script>
 </body>

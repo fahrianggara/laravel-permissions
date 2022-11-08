@@ -74,7 +74,7 @@ class RoleController extends Controller
 
                     $output .= '
                     <li class="list-group-item">
-                        <div class="form-check">
+                        <div class="form-check show_edit">
                             ' . $checkBox . '
 
                             <label for="edit' . $item->id . '" class="form-check-label checks">

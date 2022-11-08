@@ -262,7 +262,6 @@
                 }
             });
 
-
             $('body').on('shown.bs.modal', '.modal', function() {
                 $(this).find(":input:not(:button):visible:enabled:not([readonly]):first").focus();
             });
@@ -364,11 +363,10 @@
 
                             $.ajax({
                                 type: "GET",
-                                url: "{{ url('dashboard/fetch-edit-permission/') }}/" +
-                                    id,
+                                url: "{{ url('dashboard/fetch-edit-permission/') }}/" + id,
                                 beforeSend: function() {
                                     $(".checkPermissionEdit").remove();
-                                    $('.form-check').prepend(
+                                    $('.form-check.show_edit').prepend(
                                         '<i class="fas fa-spin fa-spinner mr-1"></i>'
                                     );
                                 },

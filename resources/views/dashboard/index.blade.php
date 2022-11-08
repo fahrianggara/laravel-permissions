@@ -81,13 +81,16 @@
                             <b>Hello, {{ Auth::user()->name }}!</b>
 
                             @if (Session::has('login'))
+                                <hr>
                                 <p>
                                     {{ Session::get('login') }}
                                 @elseif (Session::has('register'))
                                     {{ Session::get('register') }}
                                 </p>
                             @endif
+
                             <hr>
+
                             @if (!Session::has('register'))
                                 <div id="qoute">
                                     <span class='text-info'><b>Quote:</b></span>

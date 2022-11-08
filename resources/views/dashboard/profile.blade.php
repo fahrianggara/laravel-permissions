@@ -546,12 +546,17 @@
                         } else {
                             $("#formUpdatePassword")[0].reset();
                             $(document).find('span.error-text').text('');
-                            $(document).find('.form-control').removeClass(
-                                'is-invalid');
+                            $(document).find('.form-control').removeClass('is-invalid');
 
-                            Toast.fire({
-                                icon: 'success',
-                                title: response.message
+                            Swal.fire({
+                                icon: "success",
+                                html: response.message,
+                                allowOutsideClick: false,
+                            }).then((result) => {
+                                if (result.isConfirmed) {
+                                    // window.location.href = "{{ url('dashboard/profile') }}#password";
+                                    window.location.reload();
+                                }
                             });
                         }
                     },
